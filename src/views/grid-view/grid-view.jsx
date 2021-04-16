@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import './grid-view.css'
-import { AntaresVerticalList } from 'antares'
+import { AntaresVerticalList, navigationUtilities } from 'antares'
 
 const GridView = (props) => {
+
+    useEffect(() => {
+        props.resumeSpatialNavigation();
+        console.log('RESUMING')
+    }, [props.listsToDisplay])
 
     return (
         <div className='grid-view'>
@@ -17,4 +22,4 @@ const GridView = (props) => {
     )
 }
 
-export default GridView
+export default navigationUtilities(GridView);

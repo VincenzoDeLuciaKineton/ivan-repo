@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './sidebar-item.css'
 import { AntaresFocusable, addKeydownEvent, removeKeydownEvent, navigationUtilities } from 'antares'
 
 const SidebarItem = (props) => {
 
     const [isFocused, setIsFocused] = useState(false);
-    const [loading, setLoading] = useState(true);
+    const categoryRef = useRef(null);
 
     const handleSidebarItemFocus = () => {
         setIsFocused(true);
@@ -16,32 +16,25 @@ const SidebarItem = (props) => {
     }
 
     const toggleGrid = () => {
-        if (!isFocused) {
-            return;
-        } else {
-            props.setIdToFetch(props.id);
-        }
-    }
-
-    const onKeyDownHandler = (e) => {
-        e.preventDefault();
-        if (e.keyCode === 39) {
-            if (isFocused) {
-                console.log('RIGHT KEY PRESSED')
-                props.pauseSpatialNavigation();
-                setLoading(true);
-                toggleGrid();
-            }
-
-        }
+        props.setIdToFetch(props.id);
+        categoryRef.current = props.id;
     }
 
     useEffect(() => {
-        const onKeyDown = addKeydownEvent(onKeyDownHandler)
-        return () => {
-            removeKeydownEvent(onKeyDown)
+        const onKeyDownHandler = (e) => {
+            e.preventDefault();
+            if (e.keyCode === 39 && props.id !== props.idToFetch) {
+                toggleGrid();
+                props.pauseSpatialNavigation();
+            }
         }
-    }, [isFocused]);
+        if (isFocused) {
+            const onKeyDown = addKeydownEvent(onKeyDownHandler)
+            return () => {
+                removeKeydownEvent(onKeyDown)
+            }
+        }
+    }, [isFocused, props.idToFetch]);
 
     return (
         <AntaresFocusable
@@ -56,4 +49,4 @@ const SidebarItem = (props) => {
     )
 }
 
-export default navigationUtilities(SidebarItem)
+export default navigationUtilities(SidebarItem);

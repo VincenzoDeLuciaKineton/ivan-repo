@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react'
-import './sidebar.css'
+import './sidebar-view.css'
 import { navigationUtilities, AntaresVerticalList } from 'antares'
-import SidebarItem from '../sidebar-item/sidebar-item'
+import SidebarItem from '../../components/sidebar-item/sidebar-item'
 
 
-const Sidebar = (props) => {
+const SidebarView = (props) => {
 
     const [menuItems, setMenuItems] = useState(null);
 
 
     useEffect(() => {
         if (props.categories && props.categories.length) {
-            console.log('props.categories: ', props.categories);
             setMenuItems(props.categories.map((category, index) => {
                 return <SidebarItem
                     key={index}
@@ -19,15 +18,15 @@ const Sidebar = (props) => {
                     id={category.ID}
                     setItemInFocus={props.setItemInFocus}
                     setShowGrid={props.setShowGrid}
+                    idToFetch={props.idToFetch}
                     setIdToFetch={props.setIdToFetch}
                 />
             }))
 
-            props.setIdToFetch(props.categories[0].ID)
-            props.focusTo(props.categories[0].post_title)
+            props.focusTo(props.categories[0].post_title);
         }
 
-    }, [props.categories]);
+    }, [props.categories, props.idToFetch]);
 
     return (
         <div className="sidebar-and-loader"><AntaresVerticalList
@@ -41,4 +40,4 @@ const Sidebar = (props) => {
     )
 }
 
-export default navigationUtilities(Sidebar);
+export default navigationUtilities(SidebarView);

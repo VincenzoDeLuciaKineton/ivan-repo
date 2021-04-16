@@ -1,16 +1,13 @@
 .app-controller {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 1920px;
     height: 1080px;
   }
 
   .grid-controller {
-    position: absolute !important;
-    top: 0;
-    left: 0;
     display: flex;
     flex-direction: row;
     width: 1920px;

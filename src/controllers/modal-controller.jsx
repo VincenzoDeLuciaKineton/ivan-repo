@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { ConfigContext } from '../model/ConfigContext'
-import { ModalContext } from '../model/ModalContext'
+import { ConfigContext } from '../models/ConfigContext'
+import { ModalContext } from '../models/ModalContext'
 import ModalView from '../views/modal-view/modal-view'
 
 const ModalController = () => {
@@ -22,4 +22,4 @@ const ModalController = () => {
     )
 }
 
-export default ModalController
+export default ModalController;

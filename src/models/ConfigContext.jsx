@@ -12,26 +12,28 @@ export const ConfigProvider = ({ children }) => {
     const [showsToDisplay, setShowsToDisplay] = useState(null);
 
     useEffect(() => {
+
         fetch('https://www.tg38.it/play38//wp-content/api/getApi.php?data=getMenu&value=menu-hbbtv').then(result => {
-            console.log('result: ', result)
             return result.json();
         }).then(fetchResult => {
-            console.log('fetchResult: ', fetchResult)
             setCategories(fetchResult.data);
+            setIdToFetch(fetchResult.data[0].ID);
         })
 
     }, [])
 
     useEffect(() => {
-        console.log('FETCHING SHOWS FOR: ', idToFetch)
-        fetch(`https://www.tg38.it/play38//wp-content/api/getApi.php?data=getItemFromMenuId&value=${idToFetch}`).then(result => result.json()).then(fetchedShows => {
-            console.log('fetchedShows: ', fetchedShows);
+
+        fetch(`https://www.tg38.it/play38//wp-content/api/getApi.php?data=getItemFromMenuId&value=${idToFetch}`).then(result => result.json()
+        ).then(fetchedShows => {
             setShowsToDisplay(fetchedShows.data);
+            console.log('fetching from ID: ', idToFetch);
         })
+
     }, [idToFetch])
 
     return (
-        <ConfigContext.Provider value={{ itemInFocus, setItemInFocus, showGrid, setShowGrid, categories, setIdToFetch, showsToDisplay }}>
+        <ConfigContext.Provider value={{ itemInFocus, setItemInFocus, showGrid, setShowGrid, categories, idToFetch, setIdToFetch, showsToDisplay }}>
             {children}
         </ConfigContext.Provider>
     )

@@ -11,8 +11,8 @@ const AppController = () => {
         <div className='app-controller'>
             <ConfigProvider>
                 <ModalProvider>
-                    <SidebarController />
                     <ModalController />
+                    <SidebarController />
                     <GridController />
                 </ModalProvider>
             </ConfigProvider>

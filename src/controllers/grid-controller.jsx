@@ -21,6 +21,7 @@ const GridController = () => {
                         <ListItem
                             key={index}
                             index={index}
+                            listIndex={Math.floor(index / 4)}
                             title={show.title}
                             episodes={show.episodes}
                             content={show.content}
@@ -32,10 +33,12 @@ const GridController = () => {
                     showMatrix.push([[<ListItem
                         key={index}
                         index={index}
+                        listIndex={Math.floor(index / 4)}
                         title={show.title}
                         episodes={show.episodes}
                         content={show.content}
-                        setElementToDisplay={config.setElementToDisplay}
+                        setElementToDisplay={modal.setElementToDisplay}
+                        setShowModal={modal.setShowModal}
                     />]])
                 }
             })

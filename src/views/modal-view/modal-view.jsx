@@ -1,40 +1,72 @@
 import React, { useEffect } from 'react'
 import './modal-view.css'
-import { AntaresHorizontalList, AntaresFocusable, navigationUtilities } from 'antares'
+import { navigationUtilities, addKeydownEvent, removeKeydownEvent } from 'antares'
+import Episodes from '../../components/episodes/episodes'
 
 const ModalView = (props) => {
 
-    useEffect(() => {
-        console.log('focusable to focus back to: ', props.elementToDisplay.title)
-        props.focusTo('selected-element')
-        props.pauseSpatialNavigation();
-    }, [])
+    let onKeyDown;
 
-    const handleEnterOnModal = () => {
+    const handleBackFromModal = () => {
         props.resumeSpatialNavigation();
         props.setShowModal(false);
-        props.focusTo(`${props.elementToDisplay.title}`)
+        props.focusTo(`${props.elementToDisplay.focusableId}`);
     }
 
-    return (
-        <AntaresHorizontalList
-            innerClassname='modal-inner'
-            containerClassname='modal-outer'
-            focusableId='modal'
-        >
-            <AntaresFocusable
-                index={0}
-                focusableId='selected-element'
-                classname='modal-title'
-                focusedClassname='modal-title-focused'
-                onEnterDown={handleEnterOnModal}
-            >
-                <div className="show-details">
-                    <span className='element-title'>{props.elementToDisplay.title}</span>
+    const onKeyDownHandler = (e) => {
+        if (e.keyCode === 461 || e.keyCode === 8) {
+            handleBackFromModal();
+        }
+    }
 
+    useEffect(() => {
+
+        if (!onKeyDown) {
+            onKeyDown = addKeydownEvent(onKeyDownHandler)
+        }
+
+        return () => {
+            removeKeydownEvent(onKeyDown)
+        }
+    }, [onKeyDownHandler]);
+
+    useEffect(() => {
+        if (props.elementToDisplay.episodes && props.elementToDisplay.episodes.length > 0) {
+            props.focusTo(props.elementToDisplay.episodes[0].title)
+        }
+    }, [props.elementToDisplay.episodes])
+
+    return (
+        <div className="show-modal">
+            <div className="overview">
+                <div className="element-description">
+                    <span className='element-title'>{props.elementToDisplay.title}</span>
+                    <span className="element-content">{props.elementToDisplay.content}</span>
                 </div>
-            </AntaresFocusable>
-        </AntaresHorizontalList>
+                <div className="episodes">
+                    <Episodes
+                        episodes={props.elementToDisplay.episodes}
+                    />
+                </div>
+            </div>
+
+            {/* <AntaresHorizontalList
+                innerClassname='modal-inner'
+                containerClassname='modal-outer'
+                focusableId='modal'
+            >
+                <AntaresFocusable
+                    index={0}
+                    focusableId='selected-element'
+                    classname='modal-title'
+                    focusedClassname='modal-title-focused'
+                    onEnterDown={handleEnterOnModal}
+                >
+                    <span>Go back</span>
+                </AntaresFocusable>
+            </AntaresHorizontalList> */}
+        </div>
+
     )
 
 }

@@ -6,7 +6,6 @@ const GridView = (props) => {
 
     useEffect(() => {
         props.resumeSpatialNavigation();
-        console.log('RESUMING')
     }, [props.listsToDisplay])
 
     return (

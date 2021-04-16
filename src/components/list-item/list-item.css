@@ -1,0 +1,26 @@
+.row-item {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .row-item-focused {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+  }
+  
+  .row-item span {
+    font-size: 24px;
+  }
+  
+  .row-item-focused span {
+    font-size: 24px;
+  }

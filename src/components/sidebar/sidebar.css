@@ -1,0 +1,13 @@
+.sidebar-outer {
+    height: 1080px;
+    width: 400px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar-inner {
+    width: 400px;
+}

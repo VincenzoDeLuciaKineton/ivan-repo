@@ -1,0 +1,18 @@
+.list-outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1520px !important;
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .list-inner {
+    height: 250px;
+  }
+  
+  .focused-list{
+    background-color: orange;
+  }

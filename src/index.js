@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Antares from 'antares'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Antares>
+      <App />
+    </Antares>
   </React.StrictMode>,
   document.getElementById('root')
 );

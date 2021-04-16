@@ -24,7 +24,8 @@ const GridController = () => {
                             title={show.title}
                             episodes={show.episodes}
                             content={show.content}
-                            setElementToDisplay={config.setElementToDisplay}
+                            setElementToDisplay={modal.setElementToDisplay}
+                            setShowModal={modal.setShowModal}
                         />
                     )
                 } else {

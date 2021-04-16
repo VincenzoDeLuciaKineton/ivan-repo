@@ -2,20 +2,21 @@ import React from 'react'
 import './list-item.css'
 import { AntaresFocusable } from 'antares'
 
-const ListItem = ({ index, listIndex, setShowModal, ...props }) => {
+const ListItem = (props) => {
 
     const handleFocus = () => {
+        console.log('props.title: ', props.title)
     }
 
     const selectItem = () => {
-        props.setElementToDisplay(`Item ${listIndex} - ${index}`);
-        setShowModal(true);
+        props.setElementToDisplay({ title: props.title, episodes: props.episodes, content: props.content });
+        props.setShowModal(true);
     }
 
     return (
         <AntaresFocusable
-            index={index}
-            focusableId={`item-${listIndex}-${index}`}
+            index={props.index}
+            focusableId={`${props.title}`}
             classname='row-item'
             focusedClassname='row-item-focused'
             onFocus={handleFocus}

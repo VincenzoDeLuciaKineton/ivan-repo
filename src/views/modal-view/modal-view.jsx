@@ -2,17 +2,18 @@ import React, { useEffect } from 'react'
 import './modal-view.css'
 import { AntaresHorizontalList, AntaresFocusable, navigationUtilities } from 'antares'
 
-const ModalView = ({ focusTo, pauseSpatialNavigation, resumeSpatialNavigation, itemInFocus, elementToDisplay, setShowModal }) => {
+const ModalView = (props) => {
 
     useEffect(() => {
-        focusTo('selected-element')
-        pauseSpatialNavigation();
+        console.log('focusable to focus back to: ', props.elementToDisplay.title)
+        props.focusTo('selected-element')
+        props.pauseSpatialNavigation();
     }, [])
 
     const handleEnterOnModal = () => {
-        resumeSpatialNavigation();
-        setShowModal(false);
-        focusTo(`item-${itemInFocus[0]}-${itemInFocus[1]}`)
+        props.resumeSpatialNavigation();
+        props.setShowModal(false);
+        props.focusTo(`${props.elementToDisplay.title}`)
     }
 
     return (
@@ -28,7 +29,10 @@ const ModalView = ({ focusTo, pauseSpatialNavigation, resumeSpatialNavigation, i
                 focusedClassname='modal-title-focused'
                 onEnterDown={handleEnterOnModal}
             >
-                <span className='element-title'>{elementToDisplay}</span>
+                <div className="show-details">
+                    <span className='element-title'>{props.elementToDisplay.title}</span>
+
+                </div>
             </AntaresFocusable>
         </AntaresHorizontalList>
     )

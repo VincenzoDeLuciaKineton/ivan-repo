@@ -8,6 +8,13 @@ const SidebarView = (props) => {
 
     const [menuItems, setMenuItems] = useState(null);
 
+    useEffect(() => {
+        if (props.categories && props.categories.length) {
+            props.focusTo(props.categories[0].post_title);
+        }
+    },
+        [props.categories])
+
 
     useEffect(() => {
         if (props.categories && props.categories.length) {
@@ -22,8 +29,6 @@ const SidebarView = (props) => {
                     setIdToFetch={props.setIdToFetch}
                 />
             }))
-
-            props.focusTo(props.categories[0].post_title);
         }
 
     }, [props.categories, props.idToFetch]);

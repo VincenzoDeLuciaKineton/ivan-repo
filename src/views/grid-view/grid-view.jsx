@@ -15,7 +15,9 @@ const GridView = (props) => {
                 containerClassname='grid-outer'
                 innerClassname='grid-inner'
                 focusableId='grid'
-                isGrid={true}>
+                isGrid={true}
+                retainLastFocus={true}
+            >
                 {props.listsToDisplay}
             </AntaresVerticalList>}
         </div>

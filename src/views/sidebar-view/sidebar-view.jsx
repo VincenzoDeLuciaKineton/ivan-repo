@@ -37,6 +37,10 @@ const SidebarView = (props) => {
 
     }, [props.categories, props.idToFetch, selectedElement]);
 
+    useEffect(() => {
+        console.log('selectedElement: ', selectedElement)
+    }, [selectedElement])
+
     return (
         <div className="sidebar-and-loader"><AntaresVerticalList
             containerClassname='sidebar-outer'

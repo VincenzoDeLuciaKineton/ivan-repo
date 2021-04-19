@@ -30,7 +30,7 @@ const ListItem = (props) => {
             <div className="thumbnail"
                 style={
                     {
-                        backgroundImage: `url(${props.poster ? props.poster : '../../assets/Telemia.png'})`,
+                        backgroundImage: `url(${props.poster ? props.poster : null})`,
                     }
                 }
             >

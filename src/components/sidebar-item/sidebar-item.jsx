@@ -37,13 +37,15 @@ const SidebarItem = (props) => {
 
     return (
         <AntaresFocusable
-            classname={props.selectedElement === props.title ? 'sidebar-item-selected' : 'sidebar-item'}
-            focusedClassname={props.selectedElement === props.title ? 'sidebar-item-focused-selected' : 'sidebar-item-focused'}
+            classname='sidebar-item'
+            focusedClassname='sidebar-item-focused'
             focusableId={props.title}
             onFocus={handleSidebarItemFocus}
             onBlur={handleSidebarItemBlur}
             onEnterDown={toggleGrid}>
-            <span className='sidebar-item-label'>{props.title}</span>
+            <div className="sidebar-item-label" style={props.selectedElement === props.title ? { backgroundColor: '#5C80Bc' } : null}>
+                <span>{props.title}</span>
+            </div>
         </AntaresFocusable>
     )
 }

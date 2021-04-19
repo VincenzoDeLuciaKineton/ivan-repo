@@ -26,6 +26,7 @@ export const ConfigProvider = ({ children }) => {
 
         fetch(`https://www.tg38.it/play38//wp-content/api/getApi.php?data=getItemFromMenuId&value=${idToFetch}`).then(result => result.json()
         ).then(fetchedShows => {
+            console.log('fetched shows: ', fetchedShows.data)
             setShowsToDisplay(fetchedShows.data);
         })
 

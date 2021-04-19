@@ -4,6 +4,7 @@ import { ModalContext } from '../models/ModalContext'
 import GridView from '../views/grid-view/grid-view'
 import List from '../components/list/list'
 import ListItem from '../components/list-item/list-item'
+import Loader from '../components/loader/loader'
 
 const GridController = () => {
 
@@ -15,7 +16,10 @@ const GridController = () => {
     useEffect(() => {
         const showMatrix = [];
         if (config.showsToDisplay) {
-            config.showsToDisplay.forEach((show, index) => {
+            const filteredShows = config.showsToDisplay.filter(show => {
+                return (show.metaInfo.is_film === "1" || show.episodes.length > 0)
+            })
+            filteredShows.forEach((show, index) => {
                 if (showMatrix[Math.floor(index / 4)]) {
                     showMatrix[Math.floor(index / 4)].push(
                         <ListItem
@@ -25,6 +29,7 @@ const GridController = () => {
                             title={show.title}
                             episodes={show.episodes}
                             content={show.content}
+                            poster={show.metaInfo.is_film === '0' ? show.metaInfo.image_poster_show : show.metaInfo.image_poster_film}
                             setElementToDisplay={modal.setElementToDisplay}
                             setShowModal={modal.setShowModal}
                         />
@@ -37,6 +42,7 @@ const GridController = () => {
                         title={show.title}
                         episodes={show.episodes}
                         content={show.content}
+                        poster={show.metaInfo.is_film === '0' ? show.metaInfo.image_poster_show : show.metaInfo.image_poster_film}
                         setElementToDisplay={modal.setElementToDisplay}
                         setShowModal={modal.setShowModal}
                     />]])
@@ -60,7 +66,7 @@ const GridController = () => {
                     showGrid={config.showGrid}
                     setShowGrid={config.setShowGrid}
                     categories={config.categories}
-                /> : null}
+                /> : <Loader />}
         </div>
     )
 }

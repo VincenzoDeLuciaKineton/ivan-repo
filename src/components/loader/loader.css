@@ -1,0 +1,27 @@
+.loader-container{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.loader {
+    display: block;
+    content: "";
+    margin: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 52.5px;
+    border-top: 8px solid #CCCCCC;
+    border-right: 8px solid #CCCCCC;
+    border-bottom: 8px solid #CCCCCC;
+    border-left: 8px solid #FFF;
+    animation: 1.2s linear 0s infinite normal none running spin;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

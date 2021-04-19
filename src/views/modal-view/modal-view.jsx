@@ -43,12 +43,12 @@ const ModalView = (props) => {
                     <span className='element-title'>{props.elementToDisplay.title}</span>
                     <span className="element-content">{props.elementToDisplay.content}</span>
                 </div>
-                <div className="episodes">
+                {props.elementToDisplay.episodes.length !== 0 ? <div className="episodes">
                     <span className="element-title">Episodi disponibili: </span>
                     <Episodes
                         episodes={props.elementToDisplay.episodes}
                     />
-                </div>
+                </div> : null}
             </div>
         </div>
 

@@ -14,14 +14,28 @@ const ListItem = (props) => {
         props.setShowModal(true);
     }
 
+    const handleListItemFocus = () => {
+        console.log('poster: ', props.poster)
+    }
+
     return (
         <AntaresFocusable
             index={props.index}
             focusableId={`item-${props.index}-${props.listIndex}`}
             classname='row-item'
             focusedClassname='row-item-focused'
-            onEnterDown={selectItem}>
-            <span>{props.title}</span>
+            onEnterDown={selectItem}
+            onFocus={handleListItemFocus}
+        >
+            <div className="thumbnail"
+                style={
+                    {
+                        backgroundImage: `url(${props.poster ? props.poster : '../../assets/Telemia.png'})`,
+                    }
+                }
+            >
+                <span>{props.title}</span>
+            </div>
         </AntaresFocusable>
     )
 }

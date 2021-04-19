@@ -14,9 +14,6 @@ const ListItem = (props) => {
         props.setShowModal(true);
     }
 
-    const handleListItemFocus = () => {
-        console.log('poster: ', props.poster)
-    }
 
     return (
         <AntaresFocusable
@@ -25,7 +22,6 @@ const ListItem = (props) => {
             classname='row-item'
             focusedClassname='row-item-focused'
             onEnterDown={selectItem}
-            onFocus={handleListItemFocus}
         >
             <div className="thumbnail"
                 style={

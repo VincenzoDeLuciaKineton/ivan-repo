@@ -1,15 +1,33 @@
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 1080px;
+}
+
 .grid-view {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    width: 1920px;
-    height: 1080px;
-    background-color: #5C80BC;
+    width: 1520px;
   }
 
 .grid-outer {
   height: 1080px;
   width: 1520px;
+}
+
+.section-title {
+  color: #30323D;
+  font-size: 60px;
+  margin-left: 120px
+}
+
+.section-description {
+  color: #30323D;
+  font-size: 30px;
+  margin-left: 120px
 }
   

@@ -31,15 +31,12 @@ const SidebarView = (props) => {
                     setIdToFetch={props.setIdToFetch}
                     selectedElement={selectedElement}
                     setSelectedElement={setSelectedElement}
+                    setShowsToDisplay={props.setShowsToDisplay}
                 />
             }))
         }
 
     }, [props.categories, props.idToFetch, selectedElement]);
-
-    useEffect(() => {
-        console.log('selectedElement: ', selectedElement)
-    }, [selectedElement])
 
     return (
         <div className="sidebar-and-loader"><AntaresVerticalList

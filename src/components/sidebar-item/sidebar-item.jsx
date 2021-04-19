@@ -15,6 +15,7 @@ const SidebarItem = (props) => {
     }
 
     const toggleGrid = () => {
+        props.setShowsToDisplay(null);
         props.setSelectedElement(props.title);
         props.setIdToFetch(props.id);
     }
@@ -43,7 +44,7 @@ const SidebarItem = (props) => {
             onFocus={handleSidebarItemFocus}
             onBlur={handleSidebarItemBlur}
             onEnterDown={toggleGrid}>
-            <div className="sidebar-item-label" style={props.selectedElement === props.title ? { backgroundColor: '#5C80Bc' } : null}>
+            <div className="sidebar-item-label" style={props.selectedElement === props.title ? { backgroundColor: '#5C80BC' } : null}>
                 <span>{props.title}</span>
             </div>
         </AntaresFocusable>

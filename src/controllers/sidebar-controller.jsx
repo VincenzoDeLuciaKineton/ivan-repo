@@ -13,6 +13,7 @@ const SidebarController = () => {
                 categories={config.categories}
                 idToFetch={config.idToFetch}
                 setIdToFetch={config.setIdToFetch}
+                setShowsToDisplay={config.setShowsToDisplay}
             />
         </div>
     )

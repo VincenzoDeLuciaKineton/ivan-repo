@@ -44,27 +44,12 @@ const ModalView = (props) => {
                     <span className="element-content">{props.elementToDisplay.content}</span>
                 </div>
                 <div className="episodes">
+                    <span className="element-title">Episodi disponibili: </span>
                     <Episodes
                         episodes={props.elementToDisplay.episodes}
                     />
                 </div>
             </div>
-
-            {/* <AntaresHorizontalList
-                innerClassname='modal-inner'
-                containerClassname='modal-outer'
-                focusableId='modal'
-            >
-                <AntaresFocusable
-                    index={0}
-                    focusableId='selected-element'
-                    classname='modal-title'
-                    focusedClassname='modal-title-focused'
-                    onEnterDown={handleEnterOnModal}
-                >
-                    <span>Go back</span>
-                </AntaresFocusable>
-            </AntaresHorizontalList> */}
         </div>
 
     )

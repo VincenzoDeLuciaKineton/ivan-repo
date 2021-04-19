@@ -14,7 +14,7 @@
 .show-modal {
 width: 1920px;
 height: 1080px;
-background-color: orange;
+background-color: #E8C547;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -25,12 +25,11 @@ align-items: center;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-margin-bottom: 80px;
-padding-top: 50px;
+margin-top: 50px;
 }
 
 .element-description {
-color: white;
+color: #30323D;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
@@ -77,6 +76,6 @@ padding-left: 50px;
 .modal-title-focused {
     font-size: 60px;
     color: white;
-    border: 1px solid black;
+    border: 1px solid #30323D;
     padding: 20px;
 }

@@ -7,10 +7,12 @@ import SidebarItem from '../../components/sidebar-item/sidebar-item'
 const SidebarView = (props) => {
 
     const [menuItems, setMenuItems] = useState(null);
+    const [selectedElement, setSelectedElement] = useState(null);
 
     useEffect(() => {
         if (props.categories && props.categories.length) {
             props.focusTo(props.categories[0].post_title);
+            setSelectedElement(props.categories[0].post_title);
         }
     },
         [props.categories])
@@ -27,11 +29,13 @@ const SidebarView = (props) => {
                     setShowGrid={props.setShowGrid}
                     idToFetch={props.idToFetch}
                     setIdToFetch={props.setIdToFetch}
+                    selectedElement={selectedElement}
+                    setSelectedElement={setSelectedElement}
                 />
             }))
         }
 
-    }, [props.categories, props.idToFetch]);
+    }, [props.categories, props.idToFetch, selectedElement]);
 
     return (
         <div className="sidebar-and-loader"><AntaresVerticalList

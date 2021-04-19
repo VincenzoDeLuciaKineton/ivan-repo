@@ -11,17 +11,18 @@
 
 .episodes-list-inner {
     padding-bottom: 10px;
+    transform: none;
 }
 
 .episode {
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .episode-focused {
-    border: 1px solid black;
-    padding: 20px;
+    color: #30323D;
+    padding: 20px 20px 20px 0px;
     margin-top: 5px;
     margin-bottom: 5px;
 }

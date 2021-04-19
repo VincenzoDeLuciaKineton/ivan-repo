@@ -27,6 +27,7 @@ const Episodes = (props) => {
         <AntaresVerticalList
             containerClassname="episodes-list-outer"
             innerClassname='episodes-list-inner'
+            fixed={true}
         >
             {episodesToDisplay}
         </AntaresVerticalList>

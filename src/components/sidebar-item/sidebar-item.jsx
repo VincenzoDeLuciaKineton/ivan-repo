@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import './sidebar-item.css'
 import { AntaresFocusable, addKeydownEvent, removeKeydownEvent, navigationUtilities } from 'antares'
 
 const SidebarItem = (props) => {
 
     const [isFocused, setIsFocused] = useState(false);
-    const categoryRef = useRef(null);
 
     const handleSidebarItemFocus = () => {
         setIsFocused(true);
@@ -16,8 +15,8 @@ const SidebarItem = (props) => {
     }
 
     const toggleGrid = () => {
+        props.setSelectedElement(props.title);
         props.setIdToFetch(props.id);
-        categoryRef.current = props.id;
     }
 
     useEffect(() => {
@@ -38,8 +37,8 @@ const SidebarItem = (props) => {
 
     return (
         <AntaresFocusable
-            classname='sidebar-item'
-            focusedClassname='sidebar-item-focused'
+            classname={props.selectedElement === props.title ? 'sidebar-item-selected' : 'sidebar-item'}
+            focusedClassname={props.selectedElement === props.title ? 'sidebar-item-focused-selected' : 'sidebar-item-focused'}
             focusableId={props.title}
             onFocus={handleSidebarItemFocus}
             onBlur={handleSidebarItemBlur}

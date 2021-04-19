@@ -11,8 +11,6 @@
   
   .list-inner {
     height: 250px;
-  }
-  
-  .focused-list{
-    background-color: orange;
+    transform: none;
+    margin-left: 100px;
   }

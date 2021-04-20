@@ -16,7 +16,7 @@ width: 1920px;
 height: 1080px;
 display: flex;
 flex-direction: column;
-align-items: center;
+align-items: flex-start;
 background: linear-gradient(
     135deg,
      #5C80BC 0%,
@@ -28,9 +28,12 @@ background: linear-gradient(
 
 .overview {
 display: flex;
-flex-direction: row;
-justify-content: space-between;
+flex-direction: column;
+justify-content: flex-start;
 margin-top: 50px;
+margin-left: 100px;
+height: 1030px;
+width: 1820px;
 }
 
 .element-description {
@@ -38,16 +41,12 @@ color: #30323D;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-width: 700px;
-padding-right: 50px;
-}
-
-.episodes {
-width: 800px;
-padding-left: 50px;
+width: 1720px;
+margin-bottom: 80px;
 }
 
 .element-title{
+    height: 80px;
     font-size: 60px;
 }
 

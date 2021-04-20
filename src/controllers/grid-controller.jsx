@@ -66,6 +66,7 @@ const GridController = () => {
                     showGrid={config.showGrid}
                     setShowGrid={config.setShowGrid}
                     categories={config.categories}
+                    selectedElement={config.selectedElement}
                 /> : <Loader />}
         </div>
     )

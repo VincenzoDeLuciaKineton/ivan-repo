@@ -4,13 +4,13 @@
     justify-content: flex-start;
     align-items: center;
     width: 1520px !important;
-    height: 250px;
+    height: 230px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
   
   .list-inner {
-    height: 250px;
+    height: 230px;
     transform: none;
     margin-left: 100px;
   }

@@ -1,28 +1,15 @@
 .episodes-list-outer{
     color: white;
-    font-size: 60px;
-    width: 800px;
-    height: 700px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
 .episodes-list-inner {
-    padding-bottom: 10px;
-    transform: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.episode {
-    padding: 20px 20px 20px 0px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.episode-focused {
-    color: #30323D;
-    padding: 20px 20px 20px 0px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}

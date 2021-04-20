@@ -14,6 +14,8 @@ const SidebarController = () => {
                 idToFetch={config.idToFetch}
                 setIdToFetch={config.setIdToFetch}
                 setShowsToDisplay={config.setShowsToDisplay}
+                selectedElement={config.selectedElement}
+                setSelectedElement={config.setSelectedElement}
             />
         </div>
     )

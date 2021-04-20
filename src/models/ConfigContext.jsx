@@ -10,6 +10,7 @@ export const ConfigProvider = ({ children }) => {
     const [categories, setCategories] = useState(null);
     const [idToFetch, setIdToFetch] = useState(null);
     const [showsToDisplay, setShowsToDisplay] = useState(null);
+    const [selectedElement, setSelectedElement] = useState(null);
 
     useEffect(() => {
 
@@ -18,6 +19,7 @@ export const ConfigProvider = ({ children }) => {
         }).then(fetchResult => {
             setCategories(fetchResult.data);
             setIdToFetch(fetchResult.data[0].ID);
+            setSelectedElement(fetchResult.data[0].post_title);
         })
 
     }, [])
@@ -34,7 +36,15 @@ export const ConfigProvider = ({ children }) => {
     }, [idToFetch])
 
     return (
-        <ConfigContext.Provider value={{ itemInFocus, setItemInFocus, showGrid, setShowGrid, categories, idToFetch, setIdToFetch, showsToDisplay, setShowsToDisplay }}>
+        <ConfigContext.Provider value={{
+            itemInFocus, setItemInFocus,
+            showGrid, setShowGrid,
+            categories,
+            idToFetch, setIdToFetch,
+            showsToDisplay, setShowsToDisplay,
+            selectedElement, setSelectedElement
+        }}
+        >
             {children}
         </ConfigContext.Provider>
     )

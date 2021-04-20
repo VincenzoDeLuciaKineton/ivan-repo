@@ -44,7 +44,8 @@ const SidebarItem = (props) => {
             onFocus={handleSidebarItemFocus}
             onBlur={handleSidebarItemBlur}
             onEnterDown={toggleGrid}>
-            <div className="sidebar-item-label" style={props.selectedElement === props.title ? { backgroundColor: '#5C80BC' } : null}>
+            <div className={props.selectedElement === props.title ? 'sidebar-item-label-selected' : 'sidebar-item-label'}
+            >
                 <span>{props.title}</span>
             </div>
         </AntaresFocusable>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './episodes.css'
-import { AntaresFocusable, AntaresVerticalList, navigationUtilities } from 'antares'
+import { AntaresHorizontalList, navigationUtilities } from 'antares'
+import Episode from '../episode/episode'
 
 const Episodes = (props) => {
 
@@ -9,29 +10,24 @@ const Episodes = (props) => {
     useEffect(() => {
         if (props.episodes) {
             setEpisodesToDisplay(props.episodes.map((episode, index) => {
-                return <AntaresFocusable
+                return <Episode
                     index={index}
-                    focusableId={episode.title}
-                    classname='episode'
-                    focusedClassname='episode-focused'
-                    onFocus={() => {
-                    }}
-                >
-                    <span className="episode-title">{episode.title}</span>
-                </AntaresFocusable>
+                    key={episode.title}
+                    episode={episode}
+                />
             }))
         }
     }, [props.episodes])
 
     return (
-        <AntaresVerticalList
+        <AntaresHorizontalList
             containerClassname="episodes-list-outer"
             innerClassname='episodes-list-inner'
             fixed={true}
             remainInFocus={true}
         >
             {episodesToDisplay}
-        </AntaresVerticalList>
+        </AntaresHorizontalList>
     )
 }
 

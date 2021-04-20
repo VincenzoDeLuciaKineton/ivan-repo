@@ -11,7 +11,7 @@
     text-align: center;
 }
 
-.sidebar-item-focused{
+.sidebar-item-focused {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -22,14 +22,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-}
-
-.sidebar-item-focused span {
-    border-bottom: 4px solid #4D5061;
-}
-
-.selected-sidebar-item-focused span {
-    border-bottom: 4px solid #4D5061;
+    background-color: #5C80BC;
+    color: #30323D;
 }
 
 .sidebar-item-label {
@@ -39,10 +33,28 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-}
-
-.sidebar-item-label span{
-    color: #30323D;
     font-size: 40px;
     margin-top: 50px;
+}
+
+.sidebar-item-label-selected {
+    color: #30323D;
+    height: 150px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 40px;
+    margin-top: 50px;
+    text-decoration: underline #30323D;    
+}
+
+.sidebar-item .sidebar-item-label span {
+    opacity: 0.3;
+}
+
+.sidebar-item-focused .sidebar-item-label span {
+    color: #30323D;
+    opacity: 1;
 }

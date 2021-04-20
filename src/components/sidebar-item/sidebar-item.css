@@ -22,7 +22,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
-    background-color: #5C80BC;
+    background-color: transparent;
     color: #30323D;
 }
 
@@ -47,7 +47,7 @@
     justify-content: center;
     font-size: 40px;
     margin-top: 50px;
-    text-decoration: underline #30323D;    
+    text-decoration: underline #E8C547;    
 }
 
 .sidebar-item .sidebar-item-label span {

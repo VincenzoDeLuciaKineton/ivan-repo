@@ -32,6 +32,7 @@ const GridController = () => {
                             poster={show.metaInfo.is_film === '0' ? show.metaInfo.image_poster_show : show.metaInfo.image_poster_film}
                             setElementToDisplay={modal.setElementToDisplay}
                             setShowModal={modal.setShowModal}
+                            selectedElement={config.selectedElement}
                         />
                     )
                 } else {
@@ -45,6 +46,7 @@ const GridController = () => {
                         poster={show.metaInfo.is_film === '0' ? show.metaInfo.image_poster_show : show.metaInfo.image_poster_film}
                         setElementToDisplay={modal.setElementToDisplay}
                         setShowModal={modal.setShowModal}
+                        selectedElement={config.selectedElement}
                     />]])
                 }
             })

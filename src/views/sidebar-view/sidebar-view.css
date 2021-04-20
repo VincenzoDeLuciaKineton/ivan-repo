@@ -1,7 +1,7 @@
 .sidebar-outer {
     height: 1080px;
     width: 400px;
-    background-color: #CDD1C4;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

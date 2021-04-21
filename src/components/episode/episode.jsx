@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './episode.css'
 import { AntaresFocusable } from 'antares'
-import PlayIcon from './play.svg'
+import PlayIcon from '../../assets/images/play.svg'
 
 const Episode = (props) => {
 

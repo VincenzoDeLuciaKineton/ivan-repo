@@ -20,6 +20,7 @@ const GridController = () => {
                 return (show.metaInfo.is_film === "1" || show.episodes.length > 0)
             })
             filteredShows.forEach((show, index) => {
+                console.log('show: ', show)
                 if (showMatrix[Math.floor(index / 4)]) {
                     showMatrix[Math.floor(index / 4)].push(
                         <ListItem
@@ -33,6 +34,7 @@ const GridController = () => {
                             setElementToDisplay={modal.setElementToDisplay}
                             setShowModal={modal.setShowModal}
                             selectedElement={config.selectedElement}
+                            isFilm={show.metaInfo.is_film === '1' ? true : false}
                         />
                     )
                 } else {
@@ -47,6 +49,7 @@ const GridController = () => {
                         setElementToDisplay={modal.setElementToDisplay}
                         setShowModal={modal.setShowModal}
                         selectedElement={config.selectedElement}
+                        isFilm={show.metaInfo.is_film === '1' ? true : false}
                     />]])
                 }
             })

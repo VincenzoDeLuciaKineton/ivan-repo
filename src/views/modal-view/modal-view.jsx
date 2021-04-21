@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './modal-view.css'
 import { navigationUtilities, addKeydownEvent, removeKeydownEvent } from 'antares'
+import MovieModal from '../../components/movie-modal/movie-modal'
 import Episodes from '../../components/episodes/episodes'
 
 const ModalView = (props) => {
@@ -43,11 +44,14 @@ const ModalView = (props) => {
                     <span className='element-title'>{props.elementToDisplay.title}</span>
                     <span className="element-content">{props.elementToDisplay.content}</span>
                 </div>
-                {props.elementToDisplay.episodes.length !== 0 ? <div className="episodes">
+                {props.elementToDisplay.isFilm ?
+                    <MovieModal
+                        elementToDisplay={props.elementToDisplay} />
+                    :
                     <Episodes
-                        episodes={props.elementToDisplay.episodes}
-                    />
-                </div> : null}
+                        elementToDisplay={props.elementToDisplay}
+                        episodesToDisplay={props.episodesToDisplay}
+                    />}
             </div>
         </div>
 

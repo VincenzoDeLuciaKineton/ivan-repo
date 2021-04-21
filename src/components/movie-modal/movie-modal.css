@@ -1,0 +1,49 @@
+.poster-and-play-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 1720px;
+}
+
+.poster {
+    margin-right: 100px;
+}
+
+.play-movie-outer, .play-movie-inner {
+    height: 150px;
+    width: 500px;
+}
+
+.play-movie-button, .play-movie-button-focused {
+    height: 150px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-movie-button, .play-movie-button-focused {
+    font-size: 60px;
+    color: #4D5061;
+    padding: 20px 20px 20px 20px;
+}
+
+.info-and-play {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.play-movie-button-label {
+    font-weight: bold;
+}
+
+.movie-play-icon {
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    filter: invert(30%) sepia(12%) saturate(665%) hue-rotate(194deg) brightness(97%) contrast(93%);
+}

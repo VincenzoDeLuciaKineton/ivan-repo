@@ -30,7 +30,10 @@ const ListItem = (props) => {
             title: props.title,
             episodes: props.episodes,
             content: props.content,
-            focusableId: `item-${props.index}-${props.listIndex}`
+            focusableId: `item-${props.index}-${props.listIndex}`,
+            poster: props.poster,
+            isFilm: props.isFilm
+
         });
         props.setShowModal(true);
     }

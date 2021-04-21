@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  height: 1080px;
+  height: 980px;
+  padding-bottom: 100px;
 }
 
 .grid-view {
@@ -15,7 +16,7 @@
   }
 
 .grid-outer {
-  height: 880px;
+  height: 800px;
   width: 1520px;
 }
 
@@ -23,8 +24,8 @@
   color: #30323D;
   font-size: 80px;
   margin-left: 120px;
-  text-decoration: underline #E8C547;    
-  margin-bottom: 100px;
+  text-decoration: underline #E8C547;
+  margin-top: 50px;
   font-weight: bold;
 }
 

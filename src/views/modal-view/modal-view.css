@@ -20,8 +20,8 @@ align-items: flex-start;
 background: linear-gradient(
     135deg,
      #5C80BC 0%,
-     #E8C547 50%,
-    #CDD1C4 100%
+     #CDD1C4 50%,
+     #E8C547 100%
   );
 }
 

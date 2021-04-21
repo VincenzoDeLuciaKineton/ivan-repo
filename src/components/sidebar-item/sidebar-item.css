@@ -1,4 +1,4 @@
-.sidebar-item{
+.sidebar-item, .sidebar-item-focused{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -12,21 +12,12 @@
 }
 
 .sidebar-item-focused {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 150px;
-    width: 400px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-left: 100px;
     background-color: transparent;
     color: #30323D;
+    text-decoration: underline #E8C547; 
 }
 
-.sidebar-item-label {
+.sidebar-item-label, .sidebar-item-label-selected {
     height: 150px;
     width: 400px;
     display: flex;
@@ -38,16 +29,7 @@
 }
 
 .sidebar-item-label-selected {
-    color: #30323D;
-    height: 150px;
-    width: 400px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    font-size: 40px;
-    margin-top: 50px;
-    text-decoration: underline #E8C547;    
+       opacity: 1;
 }
 
 .sidebar-item .sidebar-item-label span {

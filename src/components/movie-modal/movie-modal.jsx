@@ -13,7 +13,7 @@ const MovieModal = (props) => {
     }, [])
 
     const playMovie = () => {
-
+        console.log('movie url: ', props.elementToDisplay.url_film)
     }
 
     return (

@@ -32,7 +32,8 @@ const ListItem = (props) => {
             content: props.content,
             focusableId: `item-${props.index}-${props.listIndex}`,
             poster: props.poster,
-            isFilm: props.isFilm
+            isFilm: props.isFilm,
+            url_film: props.url_film,
 
         });
         props.setShowModal(true);
@@ -50,13 +51,13 @@ const ListItem = (props) => {
         <AntaresFocusable
             index={props.index}
             focusableId={`item-${props.index}-${props.listIndex}`}
-            classname='row-item'
-            focusedClassname='row-item-focused'
+            classname={props.url_film !== null ? 'list-movie-item' : 'list-item'}
+            focusedClassname={props.url_film !== null ? 'list-movie-item-focused' : 'list-item-focused'}
             onEnterDown={selectItem}
             onFocus={handleGridItemFocus}
             onBlur={handleGridItemBlur}
         >
-            <div className="thumbnail"
+            <div className={props.isFilm ? 'movie-thumbnail' : "thumbnail"}
                 style={
                     {
                         backgroundImage: `url(${props.poster ? props.poster : null})`,

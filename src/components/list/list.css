@@ -7,10 +7,9 @@
     height: 230px;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-left: 50px;
   }
   
   .list-inner {
     height: 230px;
-    transform: none;
-    margin-left: 100px;
   }

@@ -25,15 +25,13 @@ background: linear-gradient(
   );
 }
 
-
 .overview {
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-margin-top: 50px;
-margin-left: 100px;
+padding: 50px 50px 50px 0;
 height: 1030px;
-width: 1820px;
+width: 1870px;
 }
 
 .element-description {
@@ -41,8 +39,10 @@ color: #30323D;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-width: 1720px;
-margin-bottom: 80px;
+width: 1520px;
+margin-bottom: 40px;
+padding-left: 150px;
+height: 300px;
 }
 
 .element-title{
@@ -52,7 +52,7 @@ margin-bottom: 80px;
 }
 
 .element-content {
- font-size: 45px;
+ font-size: 40px;
 }
 
 .modal-outer {

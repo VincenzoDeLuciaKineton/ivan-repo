@@ -1,13 +1,16 @@
-.episode {
-    height: 400px;
-    width: 700px;
+.episode, .episode-focused {
+    box-sizing: border-box;
+    height: 440px;
+    width: 740px;
     margin-right: 80px;
 }
 
+.episode {
+    padding: 20px;
+}
+
 .episode-focused {
-    height: 400px;
-    width: 700px;
-    margin-right: 80px;
+    border: 20px solid #E8c547;
 }
 
 .episode-thumbnail {

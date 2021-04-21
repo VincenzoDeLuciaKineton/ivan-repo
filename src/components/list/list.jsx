@@ -15,8 +15,8 @@ const List = (props) => {
         <AntaresHorizontalList
             focusableId={`list-${props.listIndex}`}
             hasChildrenMatrix={true}
-            innerClassname='list-inner'
-            containerClassname={`list-outer ${focused ? 'focused-list' : null}`}
+            innerClassname={`${props.listStyle}-inner`}
+            containerClassname={`${props.listStyle}-outer`}
             onFocus={() => { toggleFocus(true) }}
             onBlur={() => { toggleFocus(false) }}
         >

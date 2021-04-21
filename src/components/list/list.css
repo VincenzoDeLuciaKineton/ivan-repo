@@ -1,9 +1,12 @@
-.list-outer {
-    display: flex;
+.list-outer, .movie-list-outer {
+  display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     width: 1520px !important;
+}
+
+.list-outer {
     height: 230px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -12,4 +15,8 @@
   
   .list-inner {
     height: 230px;
+  }
+
+  .movie-list-outer{
+    height: 600px;
   }

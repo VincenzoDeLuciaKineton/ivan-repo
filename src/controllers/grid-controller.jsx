@@ -37,7 +37,7 @@ const GridController = () => {
                         />
                     )
                 } else {
-                    showMatrix.push([[<ListItem
+                    showMatrix.push([<ListItem
                         key={index}
                         index={index}
                         listIndex={Math.floor(index / 4)}
@@ -49,15 +49,18 @@ const GridController = () => {
                         setShowModal={modal.setShowModal}
                         selectedElement={config.selectedElement}
                         url_film={show.metaInfo.is_film === '1' && show.metaInfo.url_film ? show.metaInfo.url_film : null}
-                    />]])
+                    />])
                 }
             })
 
             setListsToDisplay(showMatrix.map((list, listIndex) => {
-
+                let isThereMovie = list.filter(show => {
+                    return show.props.url_film !== null;
+                })
                 return <List
                     itemsToDisplay={list}
                     listIndex={listIndex}
+                    listStyle={isThereMovie.length > 0 ? 'movie-list' : 'list'}
                 />
             }))
         }

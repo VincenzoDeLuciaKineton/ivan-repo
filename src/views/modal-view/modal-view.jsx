@@ -44,7 +44,7 @@ const ModalView = (props) => {
                     <span className='element-title'>{props.elementToDisplay.title}</span>
                     <span className="element-content">{props.elementToDisplay.content}</span>
                 </div>
-                {props.elementToDisplay.isFilm ?
+                {props.elementToDisplay.url_film !== null ?
                     <MovieModal
                         elementToDisplay={props.elementToDisplay} />
                     :

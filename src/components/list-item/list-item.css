@@ -10,20 +10,20 @@
   margin-right: 40px;
   }
 
-  .list-item {
+  .list-item, .list-movie-item {
   padding: 8px;
   }
   
-.list-item-focused {
+.list-item-focused, .list-movie-item-focused {
   border: 8px solid #E8C547;
   }
   
-.list-item span {
+.list-item span, .list-movie-item span {
   font-size: 30px;
   color: #CDD1C4;
   }
   
-.list-item-focused span {
+.list-item-focused span, .list-movie-item-focused span {
   font-size: 30px;
   color: #CDD1C4;
   }
@@ -39,7 +39,7 @@
   background-size: cover;
   }
 
-.thumbnail span {
+.thumbnail span, .movie-thumbnail span {
   display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -65,13 +65,12 @@
     margin-right: 40px;
     }
 
-  .movie-thumbnail{
-    height: 500px;
+  .movie-thumbnail {
+    height: 516px;
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     }

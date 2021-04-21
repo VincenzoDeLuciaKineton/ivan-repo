@@ -57,7 +57,7 @@ const ListItem = (props) => {
             onFocus={handleGridItemFocus}
             onBlur={handleGridItemBlur}
         >
-            <div className={props.isFilm ? 'movie-thumbnail' : "thumbnail"}
+            <div className={props.url_film !== null ? 'movie-thumbnail' : 'thumbnail'}
                 style={
                     {
                         backgroundImage: `url(${props.poster ? props.poster : null})`,

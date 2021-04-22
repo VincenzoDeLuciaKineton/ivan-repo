@@ -30,7 +30,7 @@ const ListItem = (props) => {
             title: props.title,
             episodes: props.episodes,
             content: props.content,
-            focusableId: `item-${props.index}-${props.listIndex}`,
+            focusableId: `item-${props.listIndex}-${props.index}`,
             poster: props.poster,
             isFilm: props.isFilm,
             url_film: props.url_film,
@@ -41,6 +41,7 @@ const ListItem = (props) => {
 
     const handleGridItemFocus = () => {
         setIsFocused(true);
+        console.log('focusableId: ', `item-${props.listIndex}-${props.index}`)
     }
 
     const handleGridItemBlur = () => {
@@ -50,7 +51,7 @@ const ListItem = (props) => {
     return (
         <AntaresFocusable
             index={props.index}
-            focusableId={`item-${props.index}-${props.listIndex}`}
+            focusableId={`item-${props.listIndex}-${props.index}`}
             classname={props.url_film !== null ? 'list-movie-item' : 'list-item'}
             focusedClassname={props.url_film !== null ? 'list-movie-item-focused' : 'list-item-focused'}
             onEnterDown={selectItem}

@@ -20,3 +20,8 @@
   .movie-list-outer{
     height: 600px;
   }
+
+  .movie-list-inner {
+    height: 530px;
+    width: 5000px;
+  }

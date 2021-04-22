@@ -47,10 +47,14 @@
     background: linear-gradient(
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0.4) 30%,
-      rgba(0, 0, 0, 0.9)
+      rgba(0, 0, 0, 0.7)
     );
-    padding: 20px 20px 10px 20px;
-    height: 60px;
+    padding: 20px 20px 20px 20px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .list-movie-item, .list-movie-item-focused {
@@ -63,6 +67,7 @@
     align-items: center;
     text-align: center;
     margin-right: 40px;
+    margin-left: 10px;
     }
 
   .movie-thumbnail {
@@ -73,4 +78,5 @@
     justify-content: flex-end;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     }

@@ -24,7 +24,7 @@ const GridController = () => {
                     showMatrix[Math.floor(index / 4)].push(
                         <ListItem
                             key={index}
-                            index={index}
+                            index={index % 4}
                             listIndex={Math.floor(index / 4)}
                             title={show.title}
                             episodes={show.episodes}
@@ -39,7 +39,7 @@ const GridController = () => {
                 } else {
                     showMatrix.push([<ListItem
                         key={index}
-                        index={index}
+                        index={index % 4}
                         listIndex={Math.floor(index / 4)}
                         title={show.title}
                         episodes={show.episodes}

@@ -12,9 +12,12 @@
 }
 
 .sidebar-item-focused {
-    background-color: transparent;
+    background: linear-gradient(
+    90deg,
+    #CDD1C4 0%,
+     #5C80BC 80%
+  );
     color: #30323D;
-    text-decoration: underline #E8C547; 
 }
 
 .sidebar-item-label, .sidebar-item-label-selected {

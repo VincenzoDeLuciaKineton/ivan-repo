@@ -1,7 +1,7 @@
 .list-item, .list-item-focused {
   box-sizing: border-box;
   height: 196px;
-  width: 316px;
+  width: 296px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -30,7 +30,7 @@
 
 .thumbnail {
   height: 180px;
-  width: 300px;
+  width: 280px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -60,7 +60,7 @@
   .list-movie-item, .list-movie-item-focused {
     box-sizing: border-box;
     height: 516px;
-    width: 316px;
+    width: 296px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -72,7 +72,7 @@
 
   .movie-thumbnail {
     height: 516px;
-    width: 300px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

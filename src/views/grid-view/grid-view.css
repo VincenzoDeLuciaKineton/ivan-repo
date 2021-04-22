@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: flex-start;
     width: 1520px;
+    margin-left: 90px;
   }
 
 .grid-outer {
@@ -23,10 +24,10 @@
 .section-title {
   color: #30323D;
   font-size: 80px;
-  margin-left: 58px;
   text-decoration: underline #E8C547;
   margin-top: 50px;
-  font-weight: bold;
+  margin-left: 100px;
+  font-weight: bold;;
 }
 
 .section-description {

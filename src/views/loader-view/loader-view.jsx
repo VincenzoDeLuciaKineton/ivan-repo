@@ -1,5 +1,5 @@
 import React from 'react'
-import './loader-view.css'
+import './loader-view.scss'
 import Loader from '../../components/loader/loader'
 
 const LoaderView = () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import './episodes.css'
+import './episodes.scss'
 import { AntaresHorizontalList, navigationUtilities } from 'antares'
 
 const Episodes = (props) => {

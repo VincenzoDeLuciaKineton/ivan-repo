@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './modal-view.css'
+import './modal-view.scss'
 import { navigationUtilities, addKeydownEvent, removeKeydownEvent } from 'antares'
 import MovieModal from '../../components/movie-modal/movie-modal'
 import Episodes from '../../components/episodes/episodes'

@@ -1,0 +1,27 @@
+@use '../../assets/utils/variables';
+
+$sidebar-outer-height: null;
+$sidebar-outer-width: null;
+
+
+@if(variables.$full-hd){
+    $sidebar-outer-height: 1080px;
+    $sidebar-outer-width: 400px;
+} @else {
+    $sidebar-outer-height: 720px;
+    $sidebar-outer-width: 267px;
+}
+
+.sidebar-outer {
+    height: $sidebar-outer-height;
+    width: $sidebar-outer-width;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar-inner {
+    width: $sidebar-outer-width;
+}

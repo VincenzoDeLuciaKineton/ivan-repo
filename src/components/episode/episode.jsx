@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './episode.css'
+import './episode.scss'
 import { AntaresFocusable } from 'antares'
 import PlayIcon from '../../assets/images/play.svg'
 

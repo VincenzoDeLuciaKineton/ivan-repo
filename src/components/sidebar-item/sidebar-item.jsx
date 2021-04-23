@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './sidebar-item.css'
+import './sidebar-item.scss'
 import { AntaresFocusable, addKeydownEvent, removeKeydownEvent, navigationUtilities } from 'antares'
 
 const SidebarItem = (props) => {

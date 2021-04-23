@@ -1,0 +1,129 @@
+@use '../../assets/utils/variables';
+
+$modal-controller-height: null;
+$modal-controller-width: null;
+$overview-padding: null;
+$overview-height: null;
+$overview-width: null;
+$element-description-width: null;
+$element-description-margin-bottom: null;
+$element-description-padding-left: null;
+$element-description-height: null;
+$element-title-height: null;
+$element-title-font-size: null;
+$element-content-font-size: null;
+$modal-title-padding: null;
+
+@if(variables.$full-hd){
+    $modal-controller-height: 1080px;
+    $modal-controller-width: 1920px;
+    $overview-padding: 50px 50px 50px 0;
+    $overview-height: 1030px;
+    $overview-width: 1870px;
+    $element-description-width: 1720px;
+    $element-description-margin-bottom: 40px;
+    $element-description-padding-left: 150px;
+    $element-description-height: 300px;
+    $element-title-height: 80px;
+    $element-title-font-size: 60px;
+    $element-content-font-size: 40px;
+    $modal-title-padding: 20px;
+} @else {
+    $modal-controller-height: 720px;
+    $modal-controller-width: 1280px;
+    $overview-padding: 33px 33px 33px 0;
+    $overview-height: 687px;
+    $overview-width: 1247px;
+    $element-description-width: 1147px;
+    $element-description-margin-bottom: 27px;
+    $element-description-padding-left: 100px;
+    $element-description-height: 200px;
+    $element-title-height: 53px;
+    $element-title-font-size: 40px;
+    $element-content-font-size: 27px;
+    $modal-title-padding: 13px;
+}
+
+.modal-controller {
+    @include variables.absolute-positioning();
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: $modal-controller-height;
+    width: $modal-controller-width;
+}
+
+.show-modal {
+width: $modal-controller-width;
+height: $modal-controller-height;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background: linear-gradient(
+    135deg,
+     variables.$glaucous 0%,
+     variables.$timberwolf 50%,
+     variables.$maize-crayola 100%
+  );
+}
+
+.overview {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+padding: $overview-padding;
+height: $overview-height;
+width: $overview-width;
+}
+
+.element-description {
+color: variables.$jet;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+width: $element-description-width ;
+margin-bottom: $element-description-margin-bottom;
+padding-left: $element-description-padding-left;
+height: $element-description-height;
+}
+
+.element-title{
+    height: $element-title-height;
+    font-size: $element-title-font-size;
+    font-weight: bold;
+}
+
+.element-content {
+ font-size: $element-content-font-size;
+}
+
+.modal-outer {
+    width: $modal-controller-width;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.modal-inner {
+    transform: none !important;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: $element-title-font-size;
+    color: white;
+    padding: $modal-title-padding;
+}
+
+.modal-title-focused {
+    font-size: $element-title-font-size;
+    color: white;
+    border: 1px solid variables.$jet;
+    padding: $modal-title-padding;
+}

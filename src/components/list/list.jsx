@@ -1,15 +1,8 @@
-import React, { useState } from 'react'
-import './list.css'
+import React from 'react'
+import './list.scss'
 import { AntaresHorizontalList } from 'antares'
 
 const List = (props) => {
-
-    const [focused, setFocused] = useState(false);
-
-    const toggleFocus = (bool) => {
-        setFocused(bool);
-    }
-
 
     return (
         <AntaresHorizontalList
@@ -17,8 +10,6 @@ const List = (props) => {
             hasChildrenMatrix={true}
             innerClassname={`${props.listStyle}-inner`}
             containerClassname={`${props.listStyle}-outer`}
-            onFocus={() => { toggleFocus(true) }}
-            onBlur={() => { toggleFocus(false) }}
         >
             {props.itemsToDisplay}
         </AntaresHorizontalList>

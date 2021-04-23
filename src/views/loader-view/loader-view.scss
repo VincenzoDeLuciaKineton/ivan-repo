@@ -1,0 +1,22 @@
+@use '../../assets/utils/variables';
+
+$loader-view-height: null;
+$loader-view-width: null;
+
+@if(variables.$full-hd){
+    $loader-view-height: 1080px;
+    $loader-view-width: 1920px;
+} @else {
+    $loader-view-height: 720px;
+    $loader-view-width: 1280px;
+}
+
+.loader-view {
+    @include variables.absolute-positioning();
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: $loader-view-width;
+    height: $loader-view-height;
+}

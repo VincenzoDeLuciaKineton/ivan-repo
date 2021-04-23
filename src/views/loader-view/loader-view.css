@@ -1,9 +1,0 @@
-.loader-view {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute !important;
-    width: 1920px;
-    height: 1080px;
-}

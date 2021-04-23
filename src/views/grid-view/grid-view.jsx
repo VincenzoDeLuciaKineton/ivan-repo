@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './grid-view.css'
+import './grid-view.scss'
 import { AntaresVerticalList, navigationUtilities } from 'antares'
 
 const GridView = (props) => {

@@ -1,0 +1,36 @@
+@use './assets/utils/variables';
+
+$app-width: null;
+$app-height: null;
+$grid-controller-width: null;
+
+@if(variables.$full-hd){
+  $app-width: 1920px;
+  $app-height: 1080px;
+  $grid-controller-width: 1520px;
+} @else {
+  $app-width: 1280px;
+  $app-height: 720px;
+  $width-grid: 500px;
+}
+
+.app-controller {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(
+    280deg,
+     variables.$glaucous 65%,
+    variables.$timberwolf 100%
+  );  
+  }
+
+  .grid-controller {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: $grid-controller-width;
+    height: $app-height;
+  }

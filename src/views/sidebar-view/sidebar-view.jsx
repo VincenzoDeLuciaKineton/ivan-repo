@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './sidebar-view.css'
+import './sidebar-view.scss'
 import { navigationUtilities, AntaresVerticalList } from 'antares'
 import SidebarItem from '../../components/sidebar-item/sidebar-item'
 

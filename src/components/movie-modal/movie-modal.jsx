@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import './movie-modal.css'
+import './movie-modal.scss'
 import { AntaresFocusable, AntaresHorizontalList, navigationUtilities } from 'antares'
 import PlayIcon from '../../assets/images/play.svg'
 

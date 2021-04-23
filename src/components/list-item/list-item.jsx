@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './list-item.css'
+import './list-item.scss'
 import { AntaresFocusable, addKeydownEvent, removeKeydownEvent, navigationUtilities } from 'antares'
 
 const ListItem = (props) => {

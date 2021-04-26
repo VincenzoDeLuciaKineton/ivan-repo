@@ -10,7 +10,9 @@ const GridView = (props) => {
 
     return (
         <div className="grid-container">
-            <span className="section-title">{props.selectedElement}</span>
+            <div className="section-title-container">
+                <span className="section-title">{props.selectedElement}</span>
+            </div>
 
             <div className='grid-view'>
                 {props.showGrid && <AntaresVerticalList

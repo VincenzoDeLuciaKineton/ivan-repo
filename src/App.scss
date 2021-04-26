@@ -4,6 +4,7 @@ $app-width: null;
 $app-height: null;
 $grid-controller-width: null;
 
+
 @if(variables.$full-hd){
   $app-width: 1920px;
   $app-height: 1080px;
@@ -11,10 +12,17 @@ $grid-controller-width: null;
 } @else {
   $app-width: 1280px;
   $app-height: 720px;
-  $width-grid: 500px;
+  $grid-controller-width: 1013px;
+}
+
+.antares-container {
+  height: $app-height !important;
+width: $app-width !important;
 }
 
 .app-controller {
+    height: $app-height;
+    width: $app-width;
     display: flex;
     flex-direction: row;
     align-items: center;

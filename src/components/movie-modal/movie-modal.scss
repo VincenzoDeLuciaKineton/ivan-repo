@@ -1,24 +1,53 @@
+@use '../../assets/utils/variables';
+
+$poster-and-play-width: null;
+$poster-and-play-height: null;
+$poster-and-play-padding-left: null;
+$poster-margin-right: null;
+$play-movie-button-height: null;
+$play-movie-button-width: null;
+$movie-play-icon-side: null;
+
+@if (variables.$full-hd){
+$poster-and-play-width: 1520px;
+$poster-and-play-height: 1030px;
+$poster-and-play-padding-left: 150px;
+$poster-margin-right: 100px;
+$play-movie-button-height: 150px;
+$play-movie-button-width: 500px;
+$movie-play-icon-side: 100px;
+} @else {
+$poster-and-play-width: 1013px;
+$poster-and-play-height: 487px;
+$poster-and-play-padding-left: 100px;
+$poster-margin-right: 67px;
+$play-movie-button-height: 100px;
+$play-movie-button-width: 333px;
+$movie-play-icon-side: 67px;
+}
+
 .poster-and-play-button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    width: 1520px;
-    padding-left: 150px;
+    width: $poster-and-play-width;
+    padding-left: $poster-and-play-padding-left;
 }
 
 .poster {
-    margin-right: 100px;
+    margin-right: $poster-margin-right;
+    height: $poster-and-play-height - 50px;
 }
 
 .play-movie-outer, .play-movie-inner {
-    height: 150px;
-    width: 500px;
+    height: $play-movie-button-height;
+    width: $play-movie-button-width;
 }
 
 .play-movie-button, .play-movie-button-focused {
-    height: 150px;
-    width: 500px;
+    height: $play-movie-button-height;
+    width: $play-movie-button-width;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,8 +56,8 @@
 
 .play-movie-button, .play-movie-button-focused {
     font-size: 60px;
-    color: #4D5061;
-    padding: 20px 20px 20px 20px;
+    color: variables.$independence;
+    padding: 20px;
 }
 
 .info-and-play {
@@ -43,8 +72,8 @@
 }
 
 .movie-play-icon {
-    width: 100px;
-    height: 100px;
-    margin-left: 50px;
+    width: $movie-play-icon-side;
+    height: $movie-play-icon-side;
+    margin-left: $movie-play-icon-side/2;
     filter: invert(30%) sepia(12%) saturate(665%) hue-rotate(194deg) brightness(97%) contrast(93%);
 }

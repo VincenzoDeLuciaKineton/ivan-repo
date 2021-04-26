@@ -1,17 +1,30 @@
+@use '../../assets/utils/variables';
+
+$episode-list-height: null;
+$episode-list-outer-width: null;
+$episode-list-outer-padding-left: null;
+
+@if(variables.$full-hd){
+    $episode-list-height: 500px;
+    $episode-list-outer-width: 1920px;
+    $episode-list-outer-padding-left: 150px;
+
+} @else {
+    $episode-list-height: 333px;
+    $episode-list-outer-width: 1280px;
+    $episode-list-outer-padding-left: 100px;
+}
+
 .episodes-list-outer, .episodes-list-inner{
     color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 500px;
+    justify-content: flex-start;
+    height: $episode-list-height;
 }
 
 .episodes-list-outer{
-    justify-content: flex-start;
-    width: 1920px;
-    padding-left: 150px;
-}
-
-.episodes-list-inner {
-    justify-content: flex-start;
+    width: $episode-list-outer-width;
+    padding-left: $episode-list-outer-padding-left;
 }

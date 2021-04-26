@@ -7,7 +7,7 @@ import Antares from 'antares'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Antares>
+    <Antares throttle={500}>
       <App />
     </Antares>
   </React.StrictMode>,

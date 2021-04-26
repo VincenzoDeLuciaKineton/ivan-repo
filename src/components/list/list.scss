@@ -1,23 +1,44 @@
+@use '../../assets/utils/variables';
+
+$list-outer-width: null;
+$list-height: null;
+$list-outer-margin: null;
+$movie-list-outer-height: null;
+$movie-list-inner-height: null;
+
+@if (variables.$full-hd){
+  $list-outer-width: 1520px;
+  $list-height: 230px;
+  $list-outer-margin: 10px 0 10px 0;
+  $movie-list-outer-height: 600px;
+  $movie-list-inner-height: 530px;
+} @else {
+  $list-outer-width: 1013px;
+  $list-height: 153px;
+  $list-outer-margin: 7px 0 7px 0;
+  $movie-list-outer-height: 400px;
+  $movie-list-inner-height: 353px;
+}
+
 .list-outer, .movie-list-outer {
   display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 1520px !important;
+    width: $list-outer-width !important;
 }
 
 .list-outer {
-    height: 230px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    height: $list-height;
+    margin: $list-outer-margin
   }
   
   .list-inner {
-    height: 230px;
+    height: $list-height;
   }
 
   .movie-list-outer{
-    height: 600px;
+    height: $movie-list-outer-height;
   }
 
   .movie-list-inner {

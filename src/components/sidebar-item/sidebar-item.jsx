@@ -15,9 +15,11 @@ const SidebarItem = (props) => {
     }
 
     const toggleGrid = () => {
-        props.setShowsToDisplay(null);
-        props.setSelectedElement(props.title);
-        props.setIdToFetch(props.id);
+        if (props.selectedElement !== props.title) {
+            props.setShowsToDisplay(null);
+            props.setSelectedElement(props.title);
+            props.setIdToFetch(props.id);
+        }
     }
 
     useEffect(() => {

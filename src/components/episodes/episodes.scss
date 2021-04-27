@@ -28,3 +28,7 @@ $episode-list-outer-padding-left: null;
     width: $episode-list-outer-width;
     padding-left: $episode-list-outer-padding-left;
 }
+
+.episodes-list-inner {
+    min-width: 30000px;
+}

@@ -29,9 +29,7 @@ const Episode = (props) => {
                 style={{ backgroundImage: `url(${props.episode.metaInfo.image_thumbnail ? props.episode.metaInfo.image_thumbnail : null})` }}
             >
                 <div className="episode-overlay">
-                    {isEpisodeFocused ?
-                        <img src={PlayIcon} className='play-icon' alt='play icon' />
-                        : null}
+                    <img src={PlayIcon} className='play-icon' alt='play icon' style={{ opacity: isEpisodeFocused ? '1' : '0' }} />
                     <div className="episode-shadow">
                         <span className="episode-title">{props.episode.title}</span>
                     </div>
